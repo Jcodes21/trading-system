@@ -12,6 +12,9 @@ Database: Postgresql
 ORM: JPA with hibernate
 
 ## Endpoints/File system
+
+
+## Rest of endpoints
 View / Screen
 Endpoint
 Backend package / class responsible
@@ -88,50 +91,6 @@ Create User View/Admin Action
 POST /users
 user/UserController → UserService → UserRepository
 
-Your core first version should just be:
-View / Screen
-Endpoint
-Backend package / class responsible
-
-Market View
-GET /marketdata
-marketdata/MarketDataController → MarketDataService
-
-Trade Entry View
-POST /trades
-trade/TradeController → TradeService → TradeRepository
-
-Trades List View
-GET /trades
-trade/TradeController → TradeService → TradeRepository
-
-Positions View
-GET /positions
-position/PositionController → PositionService
-
-Risk Overview View
-GET /risk
-risk/RiskController → RiskService
-
-P&L Overview View
-GET /pnl
-pnl/PnLController → PnLService
-
-And the simple request flow is:
-View
-→ Controller
-→ Service
-→ Repository/DB
-→ Response back
-
-Example:
-Trade Entry View
-→ POST /trades
-→ TradeController
-→ TradeService
-→ TradeRepository
-→ database save
-→ response returned
 
 ## Database
 MVP*Market data will be hard coded initially
